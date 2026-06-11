@@ -12,12 +12,12 @@
 
 #include "ft_printf.h"
 
-void	ft_format(va_list args, char format)
+static int	ft_format(va_list args, char format)
 {
 	if (format == 'c')
 		return (ft_putchar(va_arg(args, int)));
 	else if (format == 's')
-		return (ft_putstr(va_arg(args, int)));
+		return (ft_putstr(va_arg(args, char *)));
 	else if (format == 'p')
 		return (ft_putptr(va_arg(args, void *)));
 	else if (format == 'd' || format == 'i')
