@@ -19,7 +19,7 @@ int	ft_puthex(unsigned int n, char format)
 	int		count;
 
 	if (format == 'X')
-		base = "012345679ABCDEF";
+		base = "0123456789ABCDEF";
 	else
 		base = "0123456789abcdef";
 	count = 0;
